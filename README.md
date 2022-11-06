@@ -44,7 +44,7 @@ npm i --save-dev @types/config
 ```
 "start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js"
 
-"debug": "SET DEBUG=* && npm run start" (alterar para 'export DEBUG' caso windows)
+"debug": "SET DEBUG=* && npm run start" (alterar para 'export DEBUG' caso ubuntu)
 ```
 
 <br>
