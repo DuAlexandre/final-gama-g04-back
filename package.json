@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js",
-    "debug": "SET DEBUG=* && npm run start",
+    "debug": "export DEBUG=* && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,9 +38,11 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
+    "@types/config": "^3.3.0",
     "@types/cors": "^2.8.12",
     "@types/debug": "^4.1.7",
     "@types/express": "^4.17.14",
+    "config": "^3.3.8",
     "sequelize-cli": "^6.5.2",
     "source-map-support": "^0.5.21",
     "tslint": "^6.1.3",

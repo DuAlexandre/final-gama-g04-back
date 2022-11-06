@@ -20,8 +20,8 @@ npm i @types/sequelize
 npm install -D sequelize-cli
 ```
 
-## Scripts gerados no package.json
+## Scripts criados no package.json
 ```
 "start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js"
-"debug": "SET DEBUG=* && npm run start"
+"debug": "export DEBUG=* && npm run start" (alterar para set caso windows)
 ```

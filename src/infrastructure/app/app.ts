@@ -9,6 +9,7 @@ import cors from 'cors';
 import debug from 'debug';
 
 import { CommonRoutesConfig } from '../../adapters/apis/routes/common/common.routes.config';
+import logger from '../logs/winston.logs';
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
@@ -43,9 +44,9 @@ app.get('/', (req: express.Request, res: express.Response) => {
 
 server.listen(port, () => {
     routes.forEach((route: CommonRoutesConfig) => {
-        debugLog(`Rotas configuradas para ${route.getName()}`);
+        debugLog(`Configured routes for ${route.getName()}`);
     });
-    console.log(runningMessage);
+    logger.info(runningMessage);
 });
 
 export default app;
