@@ -35,7 +35,7 @@ if(!process.env.DEBUG) {
 
 app.use(expressWinston.logger(loggerOptions));
 
-//routes.push(new Routes Creates (app));
+//routes.push(new PUSH EM NOVAS ROTAS CRIADAS (app));
 
 const runningMessage = `Server running on port ${port}`;
 app.get('/', (req: express.Request, res: express.Response) => {
