@@ -1,8 +1,8 @@
 import * as Sequelize from "sequelize";
 
-export default{
-    up:(QueryInterface: Sequelize.QueryInterface)=>{
-        return QueryInterface.createTable('admin',{
+export default {
+    up:(QueryInterface: Sequelize.QueryInterface) => {
+        return QueryInterface.createTable('admin', {
             idAdmin:{
                 type: Sequelize.DataTypes.INTEGER,
                 primaryKey:true,
