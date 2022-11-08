@@ -49,6 +49,15 @@ npm i --save-dev @types/config
 
 <br>
 
+## Scripts para criar tabelas e seedar o banco de dados:
+```
+seeders: npx sequelize db:seed:all
+
+migrations: npx sequelize db:migrate
+```
+
+<br>
+
 ## Lembretes:
 
 - Renomear o arquivo `.env.example` para `.env` e preencher as variáveis de ambiente da sua máquina.
