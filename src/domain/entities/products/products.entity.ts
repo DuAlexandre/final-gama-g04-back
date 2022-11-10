@@ -7,5 +7,8 @@ export interface IProductsEntity {
     description: string,
     image?: string,
     price: number,
-    isAvailable: boolean  
+    isVegan: boolean,
+    isGlutenFree: boolean,
+    type: number,
+
 }

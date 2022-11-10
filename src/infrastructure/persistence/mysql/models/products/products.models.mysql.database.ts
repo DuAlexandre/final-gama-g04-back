@@ -4,6 +4,7 @@
 import { MysqlDatabase } from "../../mysql.database";
 import * as Sequelize from "sequelize";
 
+
 export default MysqlDatabase.getInstance().createModel('products', {
     idProduct: {
         type: Sequelize.DataTypes.INTEGER,
@@ -14,7 +15,7 @@ export default MysqlDatabase.getInstance().createModel('products', {
     description: Sequelize.DataTypes.STRING,
     image: Sequelize.DataTypes.STRING,
     price: Sequelize.DataTypes.DOUBLE,
-    isAvailable: Sequelize.DataTypes.BOOLEAN,
-    createdAt: Sequelize.DataTypes.DATE,
-    updatedAt: Sequelize.DataTypes.DATE
+    isVegan: Sequelize.DataTypes.BOOLEAN,
+    isGlutenFree:Sequelize.DataTypes.BOOLEAN,
+    type: Sequelize.DataTypes.INTEGER,
 });

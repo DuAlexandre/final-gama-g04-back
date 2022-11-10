@@ -10,7 +10,9 @@ export default function (product: IProductsEntity) {
         description: product.description,
         image: product.image,
         price: product.price,
-        isAvailable: product.isAvailable
+        isVegan: product.isVegan,
+        isGlutenFree: product.isGlutenFree,
+        type: product.type,
     }
 
     return { productOne: productOne };
