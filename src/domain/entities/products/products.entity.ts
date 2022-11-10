@@ -7,5 +7,4 @@ export interface IProductsEntity {
     description: string,
     image?: string,
     price: number,
-    isAvailable: boolean  
 }

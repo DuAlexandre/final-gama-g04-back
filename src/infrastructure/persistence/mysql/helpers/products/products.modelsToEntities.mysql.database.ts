@@ -13,7 +13,6 @@ export default function (product: any): IProductsEntity | undefined {
         description: product.description,
         image: product.image,
         price: product.price,
-        isAvailable: product.isAvailable
     }
 
     return (productOne as IProductsEntity);

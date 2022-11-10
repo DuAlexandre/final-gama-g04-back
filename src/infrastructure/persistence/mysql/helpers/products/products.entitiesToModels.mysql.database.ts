@@ -10,7 +10,6 @@ export default function (product: IProductsEntity) {
         description: product.description,
         image: product.image,
         price: product.price,
-        isAvailable: product.isAvailable
     }
 
     return { productOne: productOne };

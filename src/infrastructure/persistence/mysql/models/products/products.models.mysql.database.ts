@@ -14,7 +14,6 @@ export default MysqlDatabase.getInstance().createModel('products', {
     description: Sequelize.DataTypes.STRING,
     image: Sequelize.DataTypes.STRING,
     price: Sequelize.DataTypes.DOUBLE,
-    isAvailable: Sequelize.DataTypes.BOOLEAN,
     createdAt: Sequelize.DataTypes.DATE,
     updatedAt: Sequelize.DataTypes.DATE
 });
