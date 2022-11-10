@@ -49,9 +49,11 @@ npm i --save-dev @types/config
 
 <br>
 
-## Scripts para criar tabelas e seedar o banco de dados:
+## Scripts para criar BD, tabelas e seedar o banco de dados:
 ```
 seeders: npx sequelize db:seed:all
+
+criarDB:npx sequelize db:create
 
 migrations: npx sequelize db:migrate
 ```
