@@ -12,8 +12,9 @@ export default {
                 "description": "Um lanchão baum demais!",
                 "image": "https://img1.gratispng.com/20171220/hdw/hamburger-burger-png-image-5a3a9bd480b453.8972506915137904205272.jpg",
                 "price": 32.50,
-                "createdAt": "2022-11-08 14:25:23",
-                "updatedAt": "2022-11-08 14:25:23"
+                "isVegan": false,
+                "isGlutenFree":true,
+                "type":1,
             },
             {
                 "idProduct": 2,
@@ -21,8 +22,9 @@ export default {
                 "description": "Um lanchão com muita salada!",
                 "image": "https://2.bp.blogspot.com/-RYsrnDN4ui8/Vu3YrGO0SQI/AAAAAAAABkA/a10Szk00yGQ_8YF6AmbF083SAVsd1H31w/s640/dfhgad.png",
                 "price": 20.50,
-                "createdAt": "2022-11-08 14:25:23",
-                "updatedAt": "2022-11-08 14:25:23"
+                "isVegan": false,
+                "isGlutenFree":true,
+                "type":2,
             },
             {
                 "idProduct": 3,
@@ -30,8 +32,9 @@ export default {
                 "description": "Um lanchão com muita calabresa!",
                 "image": "https://www.blindburger.com.br/wp-content/uploads/2015/12/xcalabresa.png",
                 "price": 22.50,
-                "createdAt": "2022-11-08 14:25:23",
-                "updatedAt": "2022-11-08 14:25:23"
+                "isVegan": false,
+                "isGlutenFree":true,
+                "type":1,
             },
             {
                 "idProduct": 4,
@@ -39,8 +42,9 @@ export default {
                 "description": "Um lanchão com muito bacon!",
                 "image": "https://img1.gratispng.com/20180328/izw/kisspng-cheeseburger-bacon-hamburger-wrap-hot-dog-bacon-5abba6a08b2616.56814528152224732857.jpg",
                 "price": 25.50,
-                "createdAt": "2022-11-08 14:25:23",
-                "updatedAt": "2022-11-08 14:25:23"
+                "isVegan": false,
+                "isGlutenFree":true,
+                "type":2,
             },
             {
                 "idProduct": 5,
@@ -48,8 +52,9 @@ export default {
                 "description": "Um lanchão com muita cebola!",
                 "image": "https://storage.googleapis.com/grandchef-apps/gc3896/images/products/6007567642ef7.png",
                 "price": 23.50,
-                "createdAt": "2022-11-08 14:25:23",
-                "updatedAt": "2022-11-08 14:25:23"
+                "isVegan": false,
+                "isGlutenFree":true,
+                "type":1,
             }
         ])
     },

@@ -36,6 +36,10 @@ npm install -D sequelize-cli
 npm i -D config
 
 npm i --save-dev @types/config
+
+npm i jest --save-dev
+
+npm i @types/jest --save-dev
 ```
 
 <br>
@@ -51,11 +55,12 @@ npm i --save-dev @types/config
 
 ## Scripts para criar BD, tabelas e seedar o banco de dados:
 ```
-seeders: npx sequelize db:seed:all
 
 criarDB:npx sequelize db:create
 
 migrations: npx sequelize db:migrate
+
+seeders: npx sequelize db:seed:all
 ```
 
 <br>

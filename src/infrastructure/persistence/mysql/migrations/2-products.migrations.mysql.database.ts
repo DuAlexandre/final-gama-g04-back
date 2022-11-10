@@ -12,6 +12,9 @@ export default {
             description: Sequelize.DataTypes.STRING,
             image: Sequelize.DataTypes.STRING,
             price: Sequelize.DataTypes.DOUBLE,
+            isVegan: Sequelize.DataTypes.BOOLEAN,
+            isGlutenFree:Sequelize.DataTypes.BOOLEAN,
+            type: Sequelize.DataTypes.INTEGER,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE,
         });
