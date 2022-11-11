@@ -1,6 +1,3 @@
-//Estrutura -> entities -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Interface da entidade -> sintaxe = IExampleEntity
-
 export interface IProductsEntity {
     idProduct?: number,
     name: string,
@@ -9,6 +6,7 @@ export interface IProductsEntity {
     price: number,
     isVegan: boolean,
     isGlutenFree: boolean,
-    type: number,
+    isEnough: string,
+    category: string,
 
 }

@@ -1,5 +1,4 @@
-//Estrutura -> helpers -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Utilize esta função para retorno de Entity
+
 import { IProductsEntity } from "../../../../../domain/entities/products/products.entity";
 
 export default function (product: any): IProductsEntity | undefined {
@@ -15,7 +14,8 @@ export default function (product: any): IProductsEntity | undefined {
         price: product.price,
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
-        type: product.type,
+        isEnough: product.isEnough,
+        category: product.category,
     }
 
     return (productOne as IProductsEntity);
