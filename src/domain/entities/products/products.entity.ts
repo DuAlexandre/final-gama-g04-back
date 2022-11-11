@@ -9,6 +9,6 @@ export interface IProductsEntity {
     price: number,
     isVegan: boolean,
     isGlutenFree: boolean,
-    type: number,
+    category: number,
 
 }

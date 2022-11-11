@@ -15,7 +15,7 @@ export default function (product: any): IProductsEntity | undefined {
         price: product.price,
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
-        type: product.type,
+        category: product.category,
     }
 
     return (productOne as IProductsEntity);

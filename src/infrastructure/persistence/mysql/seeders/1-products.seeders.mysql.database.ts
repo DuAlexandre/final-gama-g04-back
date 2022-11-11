@@ -14,7 +14,7 @@ export default {
                 "price": 32.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "type":1,
+                "category":1,
             },
             {
                 "idProduct": 2,
@@ -24,7 +24,7 @@ export default {
                 "price": 20.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "type":2,
+                "category":2,
             },
             {
                 "idProduct": 3,
@@ -34,7 +34,7 @@ export default {
                 "price": 22.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "type":1,
+                "category":1,
             },
             {
                 "idProduct": 4,
@@ -44,7 +44,7 @@ export default {
                 "price": 25.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "type":2,
+                "category":2,
             },
             {
                 "idProduct": 5,
@@ -54,7 +54,7 @@ export default {
                 "price": 23.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "type":1,
+                "category":1,
             }
         ])
     },

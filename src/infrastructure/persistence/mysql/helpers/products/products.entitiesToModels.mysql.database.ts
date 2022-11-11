@@ -12,7 +12,7 @@ export default function (product: IProductsEntity) {
         price: product.price,
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
-        type: product.type,
+        category: product.category,
     }
 
     return { productOne: productOne };
