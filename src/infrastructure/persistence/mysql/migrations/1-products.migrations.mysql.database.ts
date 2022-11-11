@@ -15,7 +15,7 @@ export default {
             isVegan: Sequelize.DataTypes.BOOLEAN,
             isGlutenFree:Sequelize.DataTypes.BOOLEAN,
             isEnough: Sequelize.DataTypes.STRING,
-            category: Sequelize.DataTypes.INTEGER,
+            category: Sequelize.DataTypes.STRING,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE,
         });
