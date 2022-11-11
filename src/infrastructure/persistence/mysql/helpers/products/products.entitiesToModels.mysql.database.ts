@@ -12,6 +12,7 @@ export default function (product: IProductsEntity) {
         price: product.price,
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
+        isEnough: product.isEnough,
         category: product.category,
     }
 

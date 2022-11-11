@@ -8,12 +8,13 @@ export default {
         return queryInterface.bulkInsert('products', [
             {
                 "idProduct": 1,
-                "name": "x-tudo",
-                "description": "Um lanchão baum demais!",
-                "image": "https://img1.gratispng.com/20171220/hdw/hamburger-burger-png-image-5a3a9bd480b453.8972506915137904205272.jpg",
-                "price": 32.50,
-                "isVegan": false,
-                "isGlutenFree":true,
+                "name": "Chevette",
+                "description": "Corote, suco MID de Baunilha com Limão e Gelo de coco, pra sua felicidade! Valor da dose",
+                "image": "https://c.pxhere.com/photos/79/35/alcoholic_beverage_cocktail_counter_drink_glasses_liquor_pour-1529499.jpg!d",
+                "price": 2.50,
+                "isVegan": true,
+                "isGlutenFree":false,
+                "isEnough":"Serve 1 pessoa",
                 "category":1,
             },
             {
@@ -24,7 +25,8 @@ export default {
                 "price": 20.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "category":2,
+                "isEnough":"Serve 1 pessoa",
+                "category":4,
             },
             {
                 "idProduct": 3,
@@ -34,7 +36,8 @@ export default {
                 "price": 22.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "category":1,
+                "isEnough":"Serve 2 pessoa",
+                "category":4,
             },
             {
                 "idProduct": 4,
@@ -44,7 +47,7 @@ export default {
                 "price": 25.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "category":2,
+                "category":4,
             },
             {
                 "idProduct": 5,
@@ -54,7 +57,7 @@ export default {
                 "price": 23.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "category":1,
+                "category":4,
             }
         ])
     },

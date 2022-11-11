@@ -17,5 +17,6 @@ export default MysqlDatabase.getInstance().createModel('products', {
     price: Sequelize.DataTypes.DOUBLE,
     isVegan: Sequelize.DataTypes.BOOLEAN,
     isGlutenFree:Sequelize.DataTypes.BOOLEAN,
+    isEnough: Sequelize.DataTypes.STRING,
     category: Sequelize.DataTypes.INTEGER,
 });
