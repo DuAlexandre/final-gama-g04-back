@@ -3,6 +3,7 @@
 import { CommonRoutesConfig } from "../common/common.routes.config";
 import express from 'express';
 import productsController from "../../controllers/products/products.controller";
+import productsMiddleware from "../../middlewares/products/products.middleware";
 
 export class ProductsRoutes extends CommonRoutesConfig {
 
@@ -14,12 +15,12 @@ export class ProductsRoutes extends CommonRoutesConfig {
 
         this.app.route("/products")
             .get(productsController.listProducts)
-            .post(productsController.createProduct);
+            .post(productsMiddleware.createValidator, productsController.createProduct);
 
         this.app.route("/products/:idProduct")
-            .get(productsController.getProductById)
-            .put(productsController.updateProduct)
-            .delete(productsController.deleteProduct);
+            .get(productsMiddleware.idValidator, productsController.getProductById)
+            .put(productsMiddleware.idValidator, productsMiddleware.updateValidator, productsController.updateProduct)
+            .delete(productsMiddleware.idValidator, productsController.deleteProduct);
 
         return this.app;
     }

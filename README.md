@@ -40,6 +40,8 @@ npm i --save-dev @types/config
 npm i jest --save-dev
 
 npm i @types/jest --save-dev
+
+npm i express-validation
 ```
 
 <br>
