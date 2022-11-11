@@ -1,5 +1,5 @@
 export interface ITablesEntity {
-    IdTable: Number,
+    IdTable: number,
     order: object,
     command: number,
 }
