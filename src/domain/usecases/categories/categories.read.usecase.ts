@@ -4,7 +4,7 @@ import { ICategoriesEntity } from "../../entities/categories/categories.entity";
 import { ICategoriesRepository } from "../../repositories/categories/categories.repository.interface";
 import { IUseCase } from "../usecase.interface";
 
-class ReadcategoryUseCase implements IUseCase {
+class ReadCategoryUseCase implements IUseCase {
     
     constructor(private _repository: ICategoriesRepository) {}
 
@@ -13,6 +13,6 @@ class ReadcategoryUseCase implements IUseCase {
     }
 }
 
-export default new ReadcategoryUseCase(
+export default new ReadCategoryUseCase(
     categoriesRepository
 )
