@@ -15,7 +15,7 @@ export default function (product: IProductsEntity) {
 
     let category = undefined;
     if ('category' in product) {
-        category = {...product.category, ...{ idProduct: undefined}}
+        category = {...product.category}
     };
 
     return { 

@@ -6,7 +6,11 @@
   "scripts": {
     "start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js",
     "debug": "SET DEBUG=* && npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset": "tsc && npx sequelize db:migrate:undo:all",
+    "migrate": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all",
+    "create": "npx sequelize db:create"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,7 @@ export default {
                 "price": 2.50,
                 "isVegan": true,
                 "isGlutenFree":false,
-                "isEnough":"Serve 1 pessoa",
+                "isEnough":1,
                 "idCategory":1
             },
             {
@@ -25,7 +25,7 @@ export default {
                 "price": 20.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 1 pessoa",
+                "isEnough":3,
                 "idCategory":2,
             },
             {
@@ -36,7 +36,7 @@ export default {
                 "price": 22.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
+                "isEnough": 5,
                 "idCategory":3,
             },
             {
@@ -47,8 +47,8 @@ export default {
                 "price": 25.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
-                "idCategory":4,
+                "isEnough":1,
+                "idCategory":5,
             },
             {
                 "idProduct": 5,
@@ -58,9 +58,9 @@ export default {
                 "price": 23.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
+                "isEnough":1,
                 "idCategory":5,
-            }
+            },
         ])
     },
 

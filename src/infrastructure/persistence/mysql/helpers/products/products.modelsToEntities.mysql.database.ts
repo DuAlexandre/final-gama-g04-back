@@ -18,12 +18,13 @@ export default function (product: any): IProductsEntity | undefined {
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
         isEnough: product.isEnough,
-        category: product.category,
     }
 
     if(product.category){
-        (product as ICategoriesEntity).idCategory = product.category.idCategory;
-        (product as ICategoriesEntity).name = product.category.name;
+        productOne.category = {
+            idCategory: product.category.idCategory,
+            name: product.category.name
+        }
      }
 
 

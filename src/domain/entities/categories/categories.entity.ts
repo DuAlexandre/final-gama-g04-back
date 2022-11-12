@@ -1,4 +1,4 @@
 export interface ICategoriesEntity {
-    idCategory?: number,
+    idCategory: number,
     name: string,
 };

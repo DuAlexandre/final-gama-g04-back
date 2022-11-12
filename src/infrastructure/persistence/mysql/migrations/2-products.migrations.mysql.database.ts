@@ -24,7 +24,7 @@ export default {
             price: Sequelize.DataTypes.DOUBLE,
             isVegan: Sequelize.DataTypes.BOOLEAN,
             isGlutenFree:Sequelize.DataTypes.BOOLEAN,
-            isEnough: Sequelize.DataTypes.STRING,
+            isEnough: Sequelize.DataTypes.INTEGER,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE,
         });

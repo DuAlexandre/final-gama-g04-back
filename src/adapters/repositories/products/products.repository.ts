@@ -20,7 +20,7 @@ export class ProductsRepository implements IProductsRepository {
         private _ModelCategories: Sequelize.ModelCtor<Sequelize.Model<any, any>>,
     ) {
         this._ModelProducts.hasOne(this._ModelCategories, {
-            foreignKey:'idProduct',
+            foreignKey:'idCategory',
             as: 'category',
         })
     }
@@ -30,10 +30,10 @@ export class ProductsRepository implements IProductsRepository {
             const { productOne, category } = productsEntitiesToModelsMysqlDatabase(resource);
             const modelProduct = await this._database.create(this._ModelProducts, productOne);
 
-            if(category){
-                category.idProduct = modelProduct.null;
-                const categoryModel = await this._database.create(this._ModelCategories, category);
-            }
+            // if(category){
+            //     category.idProduct = modelProduct.null;
+            //     const categoryModel = await this._database.create(this._ModelCategories, category);
+            // }
             resource.idProduct = modelProduct.null;
             logger.info('Running create of ProductsRepository');
             return modelProduct;
