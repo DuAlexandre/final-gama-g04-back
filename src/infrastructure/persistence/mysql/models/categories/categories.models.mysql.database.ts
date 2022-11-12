@@ -5,11 +5,12 @@ import { MysqlDatabase } from "../../mysql.database";
 import * as Sequelize from "sequelize";
 
 
-export default MysqlDatabase.getInstance().createModel('products', {
+export default MysqlDatabase.getInstance().createModel('categories', {
     idCategory: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     name: Sequelize.DataTypes.STRING(220),
+    
 });

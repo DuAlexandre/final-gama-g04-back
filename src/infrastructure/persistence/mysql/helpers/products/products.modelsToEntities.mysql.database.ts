@@ -1,10 +1,13 @@
 
+import { ICategoriesEntity } from "../../../../../domain/entities/categories/categories.entity";
 import { IProductsEntity } from "../../../../../domain/entities/products/products.entity";
 
 export default function (product: any): IProductsEntity | undefined {
     if (!product) {
         return;
     }
+
+
 
     let productOne: IProductsEntity = {
         idProduct: product.idProduct,
@@ -19,10 +22,11 @@ export default function (product: any): IProductsEntity | undefined {
     }
 
     if(product.category){
-        productOne.category = {
-            name: product.category.name
-        }
-    }
+        (product as ICategoriesEntity).idCategory = product.category.idCategory;
+        (product as ICategoriesEntity).name = product.category.name;
+     }
+
+
 
     return (productOne as IProductsEntity);
 }

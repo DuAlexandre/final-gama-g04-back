@@ -9,6 +9,8 @@ export default {
                 autoIncrement:true,
             },
             name: Sequelize.DataTypes.STRING(220),
+            createdAt: Sequelize.DataTypes.DATE,
+            updatedAt: Sequelize.DataTypes.DATE,
         });
     },
     down: (queryInterface: Sequelize.QueryInterface) => {
