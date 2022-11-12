@@ -1,5 +1,3 @@
-//Estrutura -> repositories -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Class da entidade -> sintaxe = ExampleRepository
 import { IProductsRepository } from "../../../domain/repositories/products/products.repository.interface";
 import { IDatabaseModel } from "../../../infrastructure/persistence/databasemodel.interface";
 import * as Sequelize from "sequelize";
