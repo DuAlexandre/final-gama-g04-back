@@ -1,13 +1,13 @@
-import productsRepository from "../../../adapters/repositories/products/products.repository";
-import { IProductsEntity } from "../../entities/products/products.entity";
-import { IProductsRepository } from "../../repositories/products/products.repository.interface";
+
+import { ICategoriesEntity } from "../../entities/categories/categories.entity";
+import { ICategoriesRepository } from "../../repositories/categories/categories.repository.interface";
 import { IUseCase } from "../usecase.interface";
 
 class ListAllProductsUseCase implements IUseCase {
     
-    constructor(private _repository: IProductsRepository) {}
+    constructor(private _repository: ICategoriesRepository) {}
 
-    async execute(): Promise<IProductsEntity[] | undefined> {
+    async execute(): Promise<ICategoriesEntity[] | undefined> {
         return await this._repository.listAll();
     }
 }
