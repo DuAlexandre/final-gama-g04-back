@@ -1,4 +1,4 @@
-export interface IcategoryEntity {
+export interface IcategoriesEntity {
     idCategory?: number,
     name: string,
 };
