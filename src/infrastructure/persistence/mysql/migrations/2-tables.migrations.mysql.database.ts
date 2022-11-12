@@ -9,7 +9,7 @@ export default {
                 autoIncrement: true
             },
             idTable: Sequelize.DataTypes.INTEGER,
-            order: Sequelize.DataTypes.STRING, //sequelize!
+            order: Sequelize.DataTypes.JSON,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE
         });

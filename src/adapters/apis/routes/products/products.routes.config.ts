@@ -1,5 +1,3 @@
-//Estrutura -> routes -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Class da entidade -> sintaxe = ExampleRoutes
 import { CommonRoutesConfig } from "../common/common.routes.config";
 import express from 'express';
 import productsController from "../../controllers/products/products.controller";

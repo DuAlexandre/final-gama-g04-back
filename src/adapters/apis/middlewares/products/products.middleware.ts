@@ -1,5 +1,3 @@
-//Estrutura -> middlewares -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Class da entidade -> Sintaxe : ExampleMiddleware,
 import debug from "debug";
 import { Joi, validate } from "express-validation" 
 
@@ -18,7 +16,11 @@ class ProductsMiddleware {
             name: Joi.string().required(),
             description: Joi.string().required(),
             image: Joi.string().required(),
-            price: Joi.number().required()
+            price: Joi.number().required(),
+            isVegan: Joi.boolean().required(),
+            isGlutenFree: Joi.boolean().required(),
+            isEnough: Joi.string().required(),
+            category: Joi.string().required()
         })
     })
 

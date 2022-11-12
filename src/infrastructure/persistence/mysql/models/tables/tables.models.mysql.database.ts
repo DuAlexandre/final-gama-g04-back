@@ -8,6 +8,6 @@ export default MysqlDatabase.getInstance().createModel('tables', {
         autoIncrement: true
     },
     idTable: Sequelize.DataTypes.INTEGER,
-    order: Sequelize.DataTypes.STRING, ////sequelize!
+    order: Sequelize.DataTypes.JSON, ////sequelize!
     createdAt: Sequelize.DataTypes.DATE
 });
