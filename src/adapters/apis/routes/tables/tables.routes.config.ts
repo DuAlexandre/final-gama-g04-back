@@ -1,6 +1,7 @@
 import { CommonRoutesConfig } from "../common/common.routes.config";
 import express from "express";
 import tablesController from "../../controllers/tables/tables.controller";
+import tablesMiddleware from "../../middlewares/tables/tables.middleware";
 
 export class TablesRoutes extends CommonRoutesConfig {
 
@@ -12,12 +13,12 @@ export class TablesRoutes extends CommonRoutesConfig {
         
         this.app.route("/tables")
             .get(tablesController.listTables)
-            .post(tablesController.createTable);
+            .post(tablesMiddleware.createValidator, tablesController.createTable);
 
         this.app.route("/tables/:idTable")
-            .get(tablesController.getTablesById)
-            .put(tablesController.updateTables)
-            .delete(tablesController.deleteTables);
+            .get(tablesMiddleware.idValidator, tablesController.getTablesById)
+            .put(tablesMiddleware.idValidator, tablesMiddleware.updateValidator, tablesController.updateTables)
+            .delete(tablesMiddleware.idValidator, tablesController.deleteTables);
 
         return this.app;
     }

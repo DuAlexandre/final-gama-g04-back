@@ -6,7 +6,7 @@ export interface IProductsEntity {
     price: number,
     isVegan: boolean,
     isGlutenFree: boolean,
-    isEnough: string,
-    category: string,
+    isEnough: number,
+    category: number,
 
 }

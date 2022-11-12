@@ -1,6 +1,3 @@
-//Estrutura -> seeders -> nome deste arquivo substituindo "example"
-//Lembrar de seguir sequência númerica para população lógica do banco de dados
-//Não adicionar pastas a esta
 import * as Sequelize from "sequelize";
 
 export default {
@@ -14,8 +11,8 @@ export default {
                 "price": 2.50,
                 "isVegan": true,
                 "isGlutenFree":false,
-                "isEnough":"Serve 1 pessoa",
-                "category":"Bebidas",
+                "isEnough":1,
+                "category":1,
             },
             {
                 "idProduct": 2,
@@ -25,8 +22,8 @@ export default {
                 "price": 20.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 1 pessoa",
-                "category":"Entradas",
+                "isEnough":1,
+                "category":2,
             },
             {
                 "idProduct": 3,
@@ -36,8 +33,8 @@ export default {
                 "price": 22.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
-                "category":"Saladas",
+                "isEnough":2,
+                "category":3,
             },
             {
                 "idProduct": 4,
@@ -47,8 +44,8 @@ export default {
                 "price": 25.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
-                "category":"Pratos Principais",
+                "isEnough":2,
+                "category":4,
             },
             {
                 "idProduct": 5,
@@ -58,8 +55,8 @@ export default {
                 "price": 23.50,
                 "isVegan": false,
                 "isGlutenFree":true,
-                "isEnough":"Serve 2 pessoas",
-                "category":"Sobremesas",
+                "isEnough":2,
+                "category":5,
             }
         ])
     },

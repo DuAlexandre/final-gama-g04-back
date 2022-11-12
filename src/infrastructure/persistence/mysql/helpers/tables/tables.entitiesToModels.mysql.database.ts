@@ -3,6 +3,7 @@ import { ITablesEntity } from "../../../../../domain/entities/tables/tables.enti
 export default function (tables: ITablesEntity) {
 
     const TableList = {
+        id: tables.id,
         idTable: tables.idTable,
         order: tables.order       
     }
