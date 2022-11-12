@@ -1,9 +1,10 @@
 
+import categoriesRepository from "../../../adapters/repositories/categories/categories.repository";
 import { ICategoriesEntity } from "../../entities/categories/categories.entity";
 import { ICategoriesRepository } from "../../repositories/categories/categories.repository.interface";
 import { IUseCase } from "../usecase.interface";
 
-class ListAllProductsUseCase implements IUseCase {
+class ListAllCategoriesUseCase implements IUseCase {
     
     constructor(private _repository: ICategoriesRepository) {}
 
@@ -12,6 +13,6 @@ class ListAllProductsUseCase implements IUseCase {
     }
 }
 
-export default new ListAllProductsUseCase(
-    productsRepository
+export default new ListAllCategoriesUseCase(
+    categoriesRepository
 )
