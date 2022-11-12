@@ -1,3 +1,5 @@
+import { ICategoriesEntity } from "../categories/categories.entity";
+
 export interface IProductsEntity {
     idProduct?: number,
     name: string,
@@ -7,6 +9,6 @@ export interface IProductsEntity {
     isVegan: boolean,
     isGlutenFree: boolean,
     isEnough: string,
-    category: string,
+    category: ICategoriesEntity,
 
 }

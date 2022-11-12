@@ -15,6 +15,7 @@ export default {
                         tableName: 'categories'
                     },
                     key: 'idCategory'
+              
                 }
             },
             name: Sequelize.DataTypes.STRING(220),

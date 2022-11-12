@@ -15,7 +15,9 @@ export class ProductsRoutes extends CommonRoutesConfig {
 
         this.app.route("/products")
             .get(productsController.listProducts)
-            .post(productsMiddleware.createValidator, productsController.createProduct);
+            // .post(productsMiddleware.createValidator, productsController.createProduct);
+            .post(productsController.createProduct);
+
 
         this.app.route("/products/:idProduct")
             .get(productsMiddleware.idValidator, productsController.getProductById)

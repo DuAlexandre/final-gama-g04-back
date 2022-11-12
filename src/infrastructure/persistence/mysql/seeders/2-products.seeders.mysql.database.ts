@@ -15,7 +15,7 @@ export default {
                 "isVegan": true,
                 "isGlutenFree":false,
                 "isEnough":"Serve 1 pessoa",
-                "category":1
+                "idCategory":1
             },
             {
                 "idProduct": 2,
@@ -26,7 +26,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 1 pessoa",
-                "category":2,
+                "idCategory":2,
             },
             {
                 "idProduct": 3,
@@ -37,7 +37,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":3,
+                "idCategory":3,
             },
             {
                 "idProduct": 4,
@@ -48,7 +48,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":4,
+                "idCategory":4,
             },
             {
                 "idProduct": 5,
@@ -59,7 +59,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":5,
+                "idCategory":5,
             }
         ])
     },

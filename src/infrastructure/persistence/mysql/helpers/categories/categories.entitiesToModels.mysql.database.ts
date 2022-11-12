@@ -1,6 +1,6 @@
-import { IcategoryEntity } from "../../../../../domain/entities/categories/categories.entity";
+import { ICategoriesEntity } from "../../../../../domain/entities/categories/categories.entity";
 
-export default function (category: IcategoryEntity) {
+export default function (category: ICategoriesEntity) {
 
     const categoryOne = {
         idCategory: category.idCategory,

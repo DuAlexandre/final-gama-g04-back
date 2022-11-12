@@ -66,6 +66,10 @@ class ProductsController {
             res.status(500).send('constants!!!');
         }
     }
+
+    async productsByCategory(req: express.Request, res: express.Response){
+        const products = await this.productsByCategory
+    }
 }
 
 export default new ProductsController();

@@ -6,7 +6,7 @@ export default {
             idCategory:{
                 type: Sequelize.DataTypes.INTEGER,
                 primaryKey:true,
-                autoIncrement:true
+                autoIncrement:true,
             },
             name: Sequelize.DataTypes.STRING(220),
         });

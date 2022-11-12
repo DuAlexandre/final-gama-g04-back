@@ -7,5 +7,6 @@ export interface IProductsRepository {
     readById(resourceId: number): Promise<IProductsEntity | undefined>,
     deleteById(resourceId: number): Promise<void>,
     listAll(): Promise<IProductsEntity[]>,
-    updateById(resource: IProductsEntity): Promise<IProductsEntity | undefined>
+    updateById(resource: IProductsEntity): Promise<IProductsEntity | undefined>,
+    groupProductsByCategory(category: number): Promise<any>,
 }

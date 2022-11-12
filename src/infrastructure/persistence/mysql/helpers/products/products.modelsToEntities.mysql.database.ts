@@ -18,5 +18,11 @@ export default function (product: any): IProductsEntity | undefined {
         category: product.category,
     }
 
+    if(product.category){
+        productOne.category = {
+            name: product.category.name
+        }
+    }
+
     return (productOne as IProductsEntity);
 }

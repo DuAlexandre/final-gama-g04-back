@@ -11,8 +11,15 @@ export default function (product: IProductsEntity) {
         isVegan: product.isVegan,
         isGlutenFree: product.isGlutenFree,
         isEnough: product.isEnough,
-        category: product.category,
     }
 
-    return { productOne: productOne };
+    let category = undefined;
+    if ('category' in product) {
+        category = {...product.category, ...{ idProduct: undefined}}
+    };
+
+    return { 
+        productOne: productOne , 
+        category: category,
+    };
 }
