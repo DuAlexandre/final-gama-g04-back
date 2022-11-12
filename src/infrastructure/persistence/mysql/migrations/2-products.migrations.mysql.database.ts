@@ -8,6 +8,15 @@ export default {
                 primaryKey:true,
                 autoIncrement:true
             },
+            idCategory:{
+                type: Sequelize.DataTypes.INTEGER,
+                references: {
+                    model: {
+                        tableName: 'categories'
+                    },
+                    key: 'idCategory'
+                }
+            },
             name: Sequelize.DataTypes.STRING(220),
             description: Sequelize.DataTypes.STRING,
             image: Sequelize.DataTypes.STRING,
@@ -15,7 +24,6 @@ export default {
             isVegan: Sequelize.DataTypes.BOOLEAN,
             isGlutenFree:Sequelize.DataTypes.BOOLEAN,
             isEnough: Sequelize.DataTypes.STRING,
-            category: Sequelize.DataTypes.STRING,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE,
         });

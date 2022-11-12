@@ -15,7 +15,7 @@ export default {
                 "isVegan": true,
                 "isGlutenFree":false,
                 "isEnough":"Serve 1 pessoa",
-                "category":"Bebidas",
+                "category":1
             },
             {
                 "idProduct": 2,
@@ -26,7 +26,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 1 pessoa",
-                "category":"Entradas",
+                "category":2,
             },
             {
                 "idProduct": 3,
@@ -37,7 +37,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":"Saladas",
+                "category":3,
             },
             {
                 "idProduct": 4,
@@ -48,7 +48,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":"Pratos Principais",
+                "category":4,
             },
             {
                 "idProduct": 5,
@@ -59,7 +59,7 @@ export default {
                 "isVegan": false,
                 "isGlutenFree":true,
                 "isEnough":"Serve 2 pessoas",
-                "category":"Sobremesas",
+                "category":5,
             }
         ])
     },
