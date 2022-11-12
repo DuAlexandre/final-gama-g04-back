@@ -1,4 +1,3 @@
-
 import { IProductsEntity } from "../../../../../domain/entities/products/products.entity";
 
 export default function (product: any): IProductsEntity | undefined {

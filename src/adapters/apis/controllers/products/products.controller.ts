@@ -1,5 +1,3 @@
-//Estrutura -> controllers -> pasta da entidade -> nome deste arquivo substituindo "example"
-//Class da Entidade -> Sintaxe : ExampleController
 import debug from 'debug';
 import express from 'express';
 import createProductsUsecase from '../../../../domain/usecases/products/products.create.usecase';

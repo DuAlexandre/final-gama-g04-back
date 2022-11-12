@@ -1,6 +1,3 @@
-//Estrutura -> usecases -> pasta da entidade -> nome deste arquivo substituindo "example" e
-//método substituindo "method" Ex: create, delete, etc
-//Classe do método -> sintaxe: MethodExampleUseCase; Ex: CreateUserUseCase
 import productsRepository from "../../../adapters/repositories/products/products.repository";
 import { IProductsEntity } from "../../entities/products/products.entity";
 import { IProductsRepository } from "../../repositories/products/products.repository.interface";
