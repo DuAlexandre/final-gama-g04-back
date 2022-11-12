@@ -23,7 +23,7 @@ class TablesController {
     async getTablesById(req: express.Request, res: express.Response) {
         try {
             const tables = await readTablesUsecase.execute({
-                IdTable: Number(req.params.idTable)
+                idTable: Number(req.params.idTable)
             });
             res.status(200).send(tables)
         } catch (err) {
@@ -56,7 +56,7 @@ class TablesController {
     async deleteTables(req: express.Request, res: express.Response) {
         try {
             const tables = await deleteTablesUsecase.execute({
-                IdTable: Number(req.params.idTable)
+                idTable: Number(req.params.idTable)
             });
             res.status(204).send();       
         } catch (err){

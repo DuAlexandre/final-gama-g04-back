@@ -2,15 +2,12 @@ import { MysqlDatabase } from "../../mysql.database";
 import * as Sequelize from "sequelize";
 
 export default MysqlDatabase.getInstance().createModel('tables', {
-    idTable: {
+    id: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    order: {
-    type: Sequelize.DataTypes.JSON ,
-    allowNull: false 
-},
-    command: Sequelize.DataTypes.DOUBLE,
-    createAt: Sequelize.DataTypes.DATE
+    idTable: Sequelize.DataTypes.INTEGER,
+    order: Sequelize.DataTypes.STRING, ////sequelize!
+    createdAt: Sequelize.DataTypes.DATE
 });

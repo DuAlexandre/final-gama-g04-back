@@ -11,8 +11,8 @@ import { MysqlDatabase } from "../../../infrastructure/persistence/mysql/mysql.d
 export class TablesRepository implements ITablesRepository {
     
     constructor(
-        private _ModelTables: Sequelize.ModelStatic<Sequelize.Model<any, any>>,
-        private _database: IDatabaseModel
+        private _database: IDatabaseModel,
+        private _ModelTables: Sequelize.ModelCtor<Sequelize.Model<any, any>>
     ){}
 
     async listAll(): Promise<ITablesEntity[]> {
@@ -29,7 +29,8 @@ export class TablesRepository implements ITablesRepository {
     async create(resource: ITablesEntity): Promise<ITablesEntity> {
         try {
             const { TableList } = tablesEntitiesToModelsMysqlDatabase(resource);
-            const ModelTable = await this._database.create(this._ModelTables, TableList); resource.IdTable = ModelTable;
+            const ModelTable = await this._database.create(this._ModelTables, TableList);
+            resource.idTable = ModelTable; ///////////////////////////////////////////////////////
             logger.info('Running creation of TablesRepository');
             return ModelTable;            
         } catch (err) {
@@ -51,7 +52,7 @@ export class TablesRepository implements ITablesRepository {
 
     async updateById(resource: ITablesEntity): Promise<ITablesEntity | undefined> {
         try{
-            let ModelTable = await this._database.read(this._ModelTables, resource.IdTable!);
+            let ModelTable = await this._database.read(this._ModelTables, resource.idTable!);
             const {TableList} = tablesEntitiesToModelsMysqlDatabase(resource);
             await this._database.update(ModelTable, TableList);
             logger.info('Running updateById of TablesRepository');
@@ -64,7 +65,7 @@ export class TablesRepository implements ITablesRepository {
 
     async deleteById(resourceId: number): Promise<void> {
         try {
-            await this._database.delete(this._ModelTables, {IdTable: resourceId});
+            await this._database.delete(this._ModelTables, {idTable: resourceId});
             logger.info('Running deleteById of TableRepository');
         } catch (err) {
             logger.error('Error in deleteById os TableRepository:', err);
