@@ -6,6 +6,7 @@ import readTablesUsecase from "../../../../domain/usecases/tables/tables.read.us
 import updateTablesUsecase from "../../../../domain/usecases/tables/tables.update.usecase"
 import deleteTablesUsecase from "../../../../domain/usecases/tables/tables.delete.usecase";
 import logger from "../../../../infrastructure/logs/winston.logs";
+import constants from "../../../../infrastructure/config/constants.config";
 
 const log: debug.IDebugger = debug('app:tables-controller');
 
@@ -16,7 +17,7 @@ class TablesController {
             res.status(200).send(tables);
         } catch (err) {
             logger.error('Error listTables in TablesController:', err);
-            res.status(404).send('constants!!!');
+            res.status(404).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS404});
         }
     }
 
@@ -28,7 +29,7 @@ class TablesController {
             res.status(200).send(tables)
         } catch (err) {
             logger.error('Error getTablesById in TablesController:', err);
-            res.status(404).send('constants!!!');
+            res.status(404).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS404});
         }
     }
 
@@ -39,7 +40,7 @@ class TablesController {
             res.status(201).send(tables);
         } catch (err) {
             logger.error('Error createtables in TablesController:', err);
-            res.status(500).send('constants!!!');
+            res.status(500).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS500});
         }
     }
 
@@ -49,7 +50,7 @@ class TablesController {
             res.status(200).send(tables);
         } catch (err) {
             logger.error('Error updateTables in TablesController:', err);
-            res.status(400).send('constants!!!');
+            res.status(400).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS400});
         }
     }
 
@@ -61,7 +62,7 @@ class TablesController {
             res.status(204).send();       
         } catch (err){
             logger.error('Error deleteTables in TablesController:', err);
-            res.status(500).send('constants!!!');
+            res.status(500).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS400});
         }
     }
 };
