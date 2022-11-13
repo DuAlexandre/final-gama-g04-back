@@ -30,7 +30,7 @@ export class TablesRepository implements ITablesRepository {
         try {
             const { TableList } = tablesEntitiesToModelsMysqlDatabase(resource);
             const ModelTable = await this._database.create(this._ModelTables, TableList);
-            resource.idTable = ModelTable; ///////////////////////////////////////////////////////
+            resource.id = ModelTable;
             logger.info('Running creation of TablesRepository');
             return ModelTable;            
         } catch (err) {
@@ -52,7 +52,7 @@ export class TablesRepository implements ITablesRepository {
 
     async updateById(resource: ITablesEntity): Promise<ITablesEntity | undefined> {
         try{
-            let ModelTable = await this._database.read(this._ModelTables, resource.idTable!);
+            let ModelTable = await this._database.read(this._ModelTables, resource.id!);
             const {TableList} = tablesEntitiesToModelsMysqlDatabase(resource);
             await this._database.update(ModelTable, TableList);
             logger.info('Running updateById of TablesRepository');
@@ -65,7 +65,7 @@ export class TablesRepository implements ITablesRepository {
 
     async deleteById(resourceId: number): Promise<void> {
         try {
-            await this._database.delete(this._ModelTables, {idTable: resourceId});
+            await this._database.delete(this._ModelTables, {id: resourceId});
             logger.info('Running deleteById of TableRepository');
         } catch (err) {
             logger.error('Error in deleteById os TableRepository:', err);

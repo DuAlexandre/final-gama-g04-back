@@ -6,6 +6,7 @@ import listProductsUsecase from '../../../../domain/usecases/products/products.l
 import readProductsUsecase from '../../../../domain/usecases/products/products.read.usecase';
 import updateProductsUsecase from '../../../../domain/usecases/products/products.update.usecase';
 import logger from '../../../../infrastructure/logs/winston.logs';
+import constants from '../../../../infrastructure/config/constants.config';
 
 const log: debug.IDebugger = debug('app:products-controller');
 
@@ -16,7 +17,7 @@ class ProductsController {
             res.status(200).send(products);
         } catch (error) {
             logger.error('Error listProducts in ProductsController:', error);
-            res.status(404).send('constants!!!');
+            res.status(404).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS404});
         }
     }
 
@@ -28,7 +29,7 @@ class ProductsController {
             res.status(200).send(products)
         } catch (error) {
             logger.error('Error getProductById in ProductsController:', error);
-            res.status(404).send('constants!!!');
+            res.status(404).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS404});
         }
     }
 
@@ -39,7 +40,7 @@ class ProductsController {
             res.status(201).send(products);
         } catch (error) {
             logger.error('Error createProduct in ProductsController:', error);
-            res.status(500).send('constants!!!');
+            res.status(500).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS500});
         }
     }
 
@@ -49,7 +50,7 @@ class ProductsController {
             res.status(200).send(products);
         } catch (error) {
             logger.error('Error updateProduct in ProductsController:', error);
-            res.status(400).send('constants!!!');
+            res.status(400).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS400});
         }
     }
 
@@ -61,7 +62,7 @@ class ProductsController {
             res.status(204).send();
         } catch (error) {
             logger.error('Error deleteProduct in ProductsController:', error);
-            res.status(500).send('constants!!!');
+            res.status(500).send({messages: constants.STATUS.MESSAGES.ERROR.STATUS500});
         }
     }
 }
