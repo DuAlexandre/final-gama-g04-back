@@ -5,8 +5,8 @@ import { IUseCase } from "../usecase.interface";
 class DeleteTableUseCase implements IUseCase{
     constructor(private _repository: ITablesRepository){}
 
-    async execute(data: {idTable: number}): Promise<void> {
-        return await this._repository.deleteById(data.idTable);        
+    async execute(data: {id: number}): Promise<void> {
+        return await this._repository.deleteById(data.id);        
     }
 }
 

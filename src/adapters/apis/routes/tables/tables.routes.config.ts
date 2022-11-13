@@ -15,7 +15,7 @@ export class TablesRoutes extends CommonRoutesConfig {
             .get(tablesController.listTables)
             .post(tablesMiddleware.createValidator, tablesController.createTable);
 
-        this.app.route("/tables/:idTable")
+        this.app.route("/tables/:id")
             .get(tablesMiddleware.idValidator, tablesController.getTablesById)
             .put(tablesMiddleware.idValidator, tablesMiddleware.updateValidator, tablesController.updateTables)
             .delete(tablesMiddleware.idValidator, tablesController.deleteTables);

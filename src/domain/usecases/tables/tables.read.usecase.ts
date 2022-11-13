@@ -6,8 +6,8 @@ import { IUseCase } from "../usecase.interface";
 class ReadTableUseCase implements IUseCase{
     constructor(private _repository: ITablesRepository){}
 
-    async execute(data: {idTable: number}): Promise<ITablesEntity | undefined> {
-        return await this._repository.readById(data.idTable);        
+    async execute(data: {id: number}): Promise<ITablesEntity | undefined> {
+        return await this._repository.readById(data.id);        
     }
 }
 

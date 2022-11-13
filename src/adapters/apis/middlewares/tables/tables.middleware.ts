@@ -7,7 +7,7 @@ class TablesMiddleware {
 
     idValidator = validate({
         params: Joi.object({
-            idTable: Joi.number().exist().required()
+            id: Joi.number().exist().required()
         })
     })
 
