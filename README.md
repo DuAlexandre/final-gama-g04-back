@@ -72,3 +72,5 @@ seeders: npx sequelize db:seed:all
 - Renomear o arquivo `.env.example` para `.env` e preencher as variáveis de ambiente da sua máquina.
 
 - JAMAIS DAR PUSH DIRETO NA MAIN (já disse isso?!)
+
+- Aplicar ESLINT
