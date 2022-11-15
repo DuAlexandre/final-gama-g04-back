@@ -5,7 +5,8 @@ export default function (tables: ITablesEntity) {
     const TableList = {
         id: tables.id,
         idTable: tables.idTable,
-        order: tables.order       
+        order: tables.order,
+        command: tables.command       
     }
 
     return { TableList: TableList };

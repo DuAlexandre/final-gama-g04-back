@@ -8,7 +8,8 @@ export default function (table: any): ITablesEntity | undefined{
     let TableList: ITablesEntity = {
         id: table.id,
         idTable: table.idTable,
-        order: table.order
+        order: table.order,
+        command: table.command
     }
 
     return (TableList as ITablesEntity);

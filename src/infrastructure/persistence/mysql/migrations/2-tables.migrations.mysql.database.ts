@@ -10,6 +10,7 @@ export default {
             },
             idTable: Sequelize.DataTypes.INTEGER,
             order: Sequelize.DataTypes.JSON,
+            command: Sequelize.DataTypes.DOUBLE,
             createdAt: Sequelize.DataTypes.DATE,
             updatedAt: Sequelize.DataTypes.DATE
         });
