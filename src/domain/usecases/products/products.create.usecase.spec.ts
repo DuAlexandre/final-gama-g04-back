@@ -8,7 +8,7 @@ const ProductsRepositoryMock = ProductsRepository as jest.Mock<ProductsRepositor
 
 describe('Test for product creation', () => {
 
-    it.skip('Should create a new product', async () => {
+    it('Should create a new product', async () => {
         const productRepository = new ProductsRepositoryMock() as jest.Mocked<ProductsRepository>;
         productRepository.create.mockResolvedValue({
             "idProduct": 1,
