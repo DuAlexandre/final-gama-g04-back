@@ -5,7 +5,7 @@ import productsDeleteUsecase from "./products.delete.usecase";
 
 
 describe("Unit Test for reading the products in the use cases", () => {
-    it.skip("Should read the products in the use cases", async () => {
+    it("Should read the products in the use cases", async () => {
         const product: IProductsEntity = {
                 "name": "x-onion com Chocolate",
                 "description": "Um lanchão com muita cebola!",
@@ -27,6 +27,6 @@ describe("Unit Test for reading the products in the use cases", () => {
                 "isEnough":2,
                 "category":5,
         };
-        expect(await productsReadUsecase.execute({ idProduct: 0})).toMatchObject(productRead)
+        expect(await productsReadUsecase.execute({ idProduct: 5})).toMatchObject(productRead)
     })
 })
