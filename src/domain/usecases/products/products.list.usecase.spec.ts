@@ -1,7 +1,7 @@
 import productsListUsecase from "./products.list.usecase";
 
 describe("Test to list a product", () => {
-    it("This should list a product", async () => {
+    it.skip("Should list a product", async () => {
         const list = productsListUsecase
         expect(await productsListUsecase.execute()).toEqual([
             {
