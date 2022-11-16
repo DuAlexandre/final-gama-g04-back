@@ -15,6 +15,7 @@ class TablesMiddleware {
         body: Joi.object({
             idTable: Joi.number().required(),
             order: Joi.array().required(),
+            command: Joi.number().required()
         })
     })
 
@@ -23,6 +24,7 @@ class TablesMiddleware {
             id: Joi.number().required(),
             idTable: Joi.number().required(),
             order: Joi.array().required(),
+            comand: Joi.number().required()
         })
     })
 }
