@@ -1,17 +1,32 @@
-import productsRepository from "../../../adapters/repositories/products/products.repository";
+import productsReadUsecase from "./products.read.usecase";
+import productsCreateUsecase from "./products.create.usecase";
 import { IProductsEntity } from "../../entities/products/products.entity";
-import { IProductsRepository } from "../../repositories/products/products.repository.interface";
-import { IUseCase } from "../usecase.interface";
+import productsDeleteUsecase from "./products.delete.usecase";
 
-class ReadProductUseCase implements IUseCase {
-    
-    constructor(private _repository: IProductsRepository) {}
 
-    async execute(data: {idProduct: number}): Promise<IProductsEntity | undefined> {
-        return await this._repository.readById(data.idProduct);
-    }
-}
-
-export default new ReadProductUseCase(
-    productsRepository
-)
+describe("Unit Test for reading the products in the use cases", () => {
+    it.skip("Should read the products in the use cases", async () => {
+        const product: IProductsEntity = {
+                "name": "x-onion com Chocolate",
+                "description": "Um lanchão com muita cebola!",
+                "image": "https://storage.googleapis.com/grandchef-apps/gc3896/images/products/6007567642ef7.png",
+                "price": 23.50,
+                "isVegan": false,
+                "isGlutenFree":true,
+                "isEnough":2,
+                "category":5,
+        };
+        await productsCreateUsecase.execute(product);
+        const productRead: IProductsEntity = {
+                "name": "x-onion com Chocolate",
+                "description": "Um lanchão com muita cebola!",
+                "image": "https://storage.googleapis.com/grandchef-apps/gc3896/images/products/6007567642ef7.png",
+                "price": 23.50,
+                "isVegan": false,
+                "isGlutenFree":true,
+                "isEnough":2,
+                "category":5,
+        };
+        expect(await productsReadUsecase.execute({ idProduct: 0})).toMatchObject(productRead)
+    })
+})
