@@ -3,7 +3,7 @@ import { ITablesEntity } from "../../entities/tables/tables.entity";
 import { ITablesRepository } from "../../repositories/tables/tables.repository.interface";
 import { IUseCase } from "../usecase.interface";
 
-class CreateTableUseCase implements IUseCase{
+export class CreateTableUseCase implements IUseCase{
 
     constructor(private _repository: ITablesRepository){}
 

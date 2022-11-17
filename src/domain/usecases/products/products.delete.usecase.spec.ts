@@ -1,15 +1,10 @@
-import productsRepository from "../../../adapters/repositories/products/products.repository";
-import { IProductsRepository } from "../../repositories/products/products.repository.interface";
-import { IUseCase } from "../usecase.interface";
+import productsDeleteUsecase from "./products.delete.usecase";
 
-class DeleteProductUseCase implements IUseCase {
-    constructor(private _repository: IProductsRepository) {}
-
-    async execute(data: {idProduct: number}): Promise<void> {
-        return await this._repository.deleteById(data.idProduct);
-    }
-}
-
-export default new DeleteProductUseCase(
-    productsRepository
-)
+describe("Test to delete a product",() => {
+    it("should delete a product", async ()  => {
+        const product = {
+            idProduct: 0
+        };
+        expect(await productsDeleteUsecase.execute(product)).toBeUndefined();
+    });    
+})

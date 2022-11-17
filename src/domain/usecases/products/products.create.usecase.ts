@@ -3,7 +3,7 @@ import { IProductsEntity } from "../../entities/products/products.entity";
 import { IProductsRepository } from "../../repositories/products/products.repository.interface";
 import { IUseCase } from "../usecase.interface";
 
-class CreateProductUseCase implements IUseCase {
+export class CreateProductUseCase implements IUseCase {
     
     constructor(private _repository: IProductsRepository) {}
 
