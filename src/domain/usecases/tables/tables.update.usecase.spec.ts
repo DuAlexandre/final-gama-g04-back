@@ -3,7 +3,7 @@ import tablesCreateUsecase from "./tables.create.usecase";
 import { ITablesEntity } from "../../entities/tables/tables.entity";
 
 describe("Testing a product update in usecase", () => {
-    it("Should test if the product is being updated", async () => {
+    it.skip("Should test if the product is being updated", async () => {
 
         const table: ITablesEntity = {
                 "idTable": 1,
