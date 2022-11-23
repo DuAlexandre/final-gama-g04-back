@@ -56,6 +56,11 @@ Inicie o servidor - Para usuários linux
   npm run udebug
 ```
 
+Para transpilar o projeto:
+
+```bash
+  tsc
+```
 Renomear o arquivo .env.example para .env para conectar com a nossa aplicação na nuvem.
 
 
