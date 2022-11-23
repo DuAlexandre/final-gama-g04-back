@@ -22,7 +22,7 @@ describe('GET in /products', () => {
     });
 });
 
-let idResponse: any;
+let idProduct: any;
 describe('POST in /products', () => {
     it("Should register a new product", async () => { //increation
         const response = await request(app)
@@ -51,7 +51,7 @@ describe('POST in /products', () => {
 describe('GET in /products/id', () => {
     it("Should return by id in the products", async () =>{
         await request(app)
-        .get(`/products/${idResponse}`)
+        .get(`/products/${idProduct}`)
         .expect(400)
     });
 });
@@ -69,8 +69,16 @@ describe ('PUT in /products/id', () => {
     ])
             (`You must change the $s field`, async (key, param) => {
                 await request(app)
-                .put(`/products/${idResponse}`)
+                .put(`/products/${idProduct}`)
                 .send(param)
                 .expect(400)
-            })
+            });
+});
+
+describe("DELETE in /products/:idProduct", () => {
+    it(" You must delete the product saved in the previous test", async () => {
+        await request(app)
+        .delete(`/products/${idProduct}`)
+        .expect(400)
+    })
 })

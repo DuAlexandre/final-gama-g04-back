@@ -16,7 +16,7 @@ import handleError from '../config/handle.error';
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const routes : CommonRoutesConfig[] = [];
 const debugLog: debug.IDebugger = debug('app');
 
