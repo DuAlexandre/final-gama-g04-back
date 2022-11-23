@@ -1,76 +1,113 @@
-# README Temporário
 
-## Combinados até o momento:
+# Projeto Final - Gama Academy - Grupo 04
 
-- Padrão de branch: feature/nome-da-feature-em-ingles
+Projeto Final solicitado pela Gama Academy como trabalho de conclusão de curso do Bootcamp Nanodegree de Desenvolvimento Web FullStack, nesta, com especialização em BackEnd.
 
-- Padrão de commit: em inglês, primeira letra maiúscula, e verbo no gerúndio. Ex: 'Creating new feature'
 
-- Estrutura de pastas já montada. Onde houver uma pasta chamada 'example' significa que deverá haver uma pasta correspondente a entidade que está sendo trabalhada com os seus respectivos arquivos. Ex: em domain/entities há uma pasta chamada 'example' e dentro da mesma um arquivo chamado 'example.entity.ts'. Se estou trabalhando com uma entidade chamada users (sempre no plural) deverei criar dentro de domain/entities uma pasta 'users' com um arquivo 'users.entity.ts'.
+## Apêndice
 
-- Convide um colaborador para revisar seu pull request.
+Neste trabalho, escolhemos fazer um cardápio virtual em um projeto White Label (ou seja, um sistema modelo criado por uma empresa que pode ser reutilizado por outras, apenas modificando informações como logo e marca), no qual o cliente iria realizar um pedido em sua mesa, escolhendo os itens do cardápio, vendo as informações de acordo com o modelo na documentação da API, além disso, o cliente iria acompanhar os valores de sua comanda, passando para a cozinha o seu pedido. 
+A estrutura de dados da aplicação está pronta para o CRUD completo dos pedidos e da cozinha e pronta para receber um possível módulo de administrador.
 
-- JAMAIS DAR PUSH DIRETO NA MAIN
 
-<br>
 
-## Pacotes instalados até o momento:
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-```
-npm i express debug winston express-winston cors
 
-npm i -D @types/cors @types/express @types/debug source-map-support tslint typescript
+## Documentação da API
 
-npx tsc --init --rootDir src --outDir dist
+Por ser extensa, optamos por disponibilizar a documentação da API via link:
 
-npm install dotenv --save
 
-npm i sequelize
+- [Link da Documentação](https://dualexandre.github.io/documentation-04/)
+## Rodando localmente
 
-npm install --save mysql2
+Clone o projeto
 
-npm i @types/sequelize
-
-npm install -D sequelize-cli
-
-npm i -D config
-
-npm i --save-dev @types/config
-
-npm i jest --save-dev
-
-npm i @types/jest --save-dev
-
-npm i express-validation
+```bash
+  git clone https://github.com/DuAlexandre/final-gama-g04-back.git
 ```
 
-<br>
+Entre no diretório do projeto
 
-## Scripts criados no package.json:
-```
-"start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js"
-
-"debug": "SET DEBUG=* && npm run start" (alterar para 'export DEBUG' caso ubuntu)
+```bash
+  cd final-gama-g04-back
 ```
 
-<br>
+Instale as dependências
 
-## Scripts para criar BD, tabelas e seedar o banco de dados:
+```bash
+  npm install
 ```
 
-criarDB:npx sequelize db:create
+Inicie o servidor - Para usuários Windows
 
-migrations: npx sequelize db:migrate
+```bash
+  npm run wdebug
+```
+Inicie o servidor - Para usuários linux
 
-seeders: npx sequelize db:seed:all
+```bash
+  npm run udebug
 ```
 
-<br>
+Para transpilar o projeto:
 
-## Lembretes:
+```bash
+  tsc
+```
+Renomear o arquivo .env.example para .env para conectar com a nossa aplicação na nuvem.
 
-- Renomear o arquivo `.env.example` para `.env` e preencher as variáveis de ambiente da sua máquina.
 
-- JAMAIS DAR PUSH DIRETO NA MAIN (já disse isso?!)
+## Funcionalidades
 
-- Aplicar ESLINT
+Neste código Back-End, pode ser utilizado diversas funcionalidades, tais como:
+
+```bash
+npm run udebug ou wdegub -  Para iniciar a aplicação.
+```
+
+
+### Testes
+
+```bash
+npm run test -  Para iniciar a execução de testes por jest e Supertest.
+```
+```bash
+npm run test:watch -  Para iniciar a execução de testes por jest e Supertest com visualização em tempo real e com --userOpenHandles.
+```
+```bash
+npm run test:coverage -  Para iniciar a execução de testes via colunas no estilo coverage com visualização detalhada.
+```
+```bash
+npm run udebug ou wdegub -  Para iniciar a aplicação.
+```
+
+Os testes foram efetuados na totalidade dos usecases e nas rotas utilizadas pelo FRONT.
+
+### CRUD
+
+Feito em sua totalidade GET, GET BY ID, DELETE, PUT, POST para as entidades TABLES e PRODUCTS mesmo sem uso para o FRONT para aplicação futura em novas versões.
+
+
+
+## Referência
+
+ - [Jest Documentation](https://jestjs.io/docs/getting-started)
+ - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+
+
+
+## Autores
+
+- <img src="https://avatars.githubusercontent.com/u/95940707?s=60&v=4"> [@DuAlexandre](https://github.com/DuAlexandre)
+- <img src="https://avatars.githubusercontent.com/u/109252921?s=60&v=4"> [@DylCaprio](https://github.com/DylCaprio)
+- <img src="https://avatars.githubusercontent.com/u/109240608?s=60&v=4"> [@jonveigel](https://github.com/jonveigel)
+- <img src="https://avatars.githubusercontent.com/u/105946388?s=60&v=4"> [@marcos=px](https://github.com/marcos-px)
+
+
