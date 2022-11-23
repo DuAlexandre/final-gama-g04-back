@@ -22,15 +22,15 @@ describe('GET in /products', () => {
     });
 });
 
-let idResponse;
+let idResponse: any;
 describe('POST in /products', () => {
     it("Should register a new product", async () => { //increation
         const response = await request(app)
         .post("/products")
         .send({
-        name: "PRODUTO CADASTRADO NO TESTE",
-		description: "Criado pelo JEST",
-		image: "https://testes.com.br",
+        name: "PRODUCT REGISTERED IN THE TEST",
+		description: "Created by JEST",
+		image: "https://tests.com",
 		price: 100.99,
 		isVegan: false,
 		isGlutenFree: false,
@@ -39,4 +39,38 @@ describe('POST in /products', () => {
         })
         .expect(201);
     });
+
+    it("Should not add anythin, or required items when passing the empty body in POST Products", async () =>{
+        await request(app)
+        .post('/products')
+        .send({})
+        .expect(400)
+    });
 });
+
+describe('GET in /products/id', () => {
+    it("Should return by id in the products", async () =>{
+        await request(app)
+        .get(`/products/${idResponse}`)
+        .expect(400)
+    });
+});
+
+describe ('PUT in /products/id', () => {
+    test.each([
+                ["name",{name: "Put in testes --name"}],
+                ["description", {description:" Description in the update by testing on product routes"}],
+                ["image", {image:"Updated picture on the PUT of the products - tests"}],
+                ["price", {price:1.50}],
+                ["isVegan", {isVegan: true}],
+                ["isGlutenFree", {isGlutenFree: false}],
+                ["isEnough", {isEnough: 1}],
+                ["category", {category: 1}],
+    ])
+            (`You must change the $s field`, async (key, param) => {
+                await request(app)
+                .put(`/products/${idResponse}`)
+                .send(param)
+                .expect(400)
+            })
+})
