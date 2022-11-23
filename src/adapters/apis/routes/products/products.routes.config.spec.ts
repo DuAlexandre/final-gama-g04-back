@@ -18,13 +18,13 @@ describe('GET in /products', () => {
         .expect('content-type', /json/)
         .expect(200);
     
-    expect(response.body[0].idProduct).toEqual(1)
+    expect(response.body[0].idProduct).toEqual(13)
     });
 });
 
 let idResponse;
 describe('POST in /products', () => {
-    it.skip("Should register a new product", async () => { //increation
+    it("Should register a new product", async () => { //increation
         const response = await request(app)
         .post("/products")
         .send({
@@ -34,10 +34,9 @@ describe('POST in /products', () => {
 		price: 100.99,
 		isVegan: false,
 		isGlutenFree: false,
-		isEnough: 50,
+		isEnough: 2,
 		category: 1
         })
         .expect(201);
-        idResponse = response.body.content.idProduct
     });
 });

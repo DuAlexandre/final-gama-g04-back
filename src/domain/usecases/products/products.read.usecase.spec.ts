@@ -7,26 +7,26 @@ import productsDeleteUsecase from "./products.delete.usecase";
 describe("Unit Test for reading the products in the use cases", () => {
     it("Should read the products in the use cases", async () => {
         const product: IProductsEntity = {
-                "name": "x-onion com Chocolate",
-                "description": "Um lanchão com muita cebola!",
-                "image": "https://storage.googleapis.com/grandchef-apps/gc3896/images/products/6007567642ef7.png",
-                "price": 23.50,
-                "isVegan": false,
-                "isGlutenFree":true,
-                "isEnough":2,
-                "category":5,
+            "name": "Combo Veggie",
+            "description": "Porção de Edamane (feijão de soja) cozido no vapor e salada de algas wakame marinada em óleo de gergelim e pimenta ",
+            "image": "https://res.cloudinary.com/diiwq3le6/image/upload/v1668864015/combo_veggie_ba8p2w.jpg",
+            "price": 17.9,
+            "isVegan": true,
+            "isGlutenFree": true,
+            "isEnough": 1,
+            "category": 1
         };
         await productsCreateUsecase.execute(product);
         const productRead: IProductsEntity = {
-                "name": "x-onion com Chocolate",
-                "description": "Um lanchão com muita cebola!",
-                "image": "https://storage.googleapis.com/grandchef-apps/gc3896/images/products/6007567642ef7.png",
-                "price": 23.50,
-                "isVegan": false,
-                "isGlutenFree":true,
-                "isEnough":2,
-                "category":5,
+            "name": "Combo Veggie",
+            "description": "Porção de Edamane (feijão de soja) cozido no vapor e salada de algas wakame marinada em óleo de gergelim e pimenta ",
+            "image": "https://res.cloudinary.com/diiwq3le6/image/upload/v1668864015/combo_veggie_ba8p2w.jpg",
+            "price": 17.9,
+            "isVegan": true,
+            "isGlutenFree": true,
+            "isEnough": 1,
+            "category": 1
         };
-        expect(await productsReadUsecase.execute({ idProduct: 5})).toMatchObject(productRead)
+        expect(await productsReadUsecase.execute({ idProduct: 25})).toMatchObject(productRead)
     })
 })
