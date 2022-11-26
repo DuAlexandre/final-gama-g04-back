@@ -65,11 +65,12 @@ Para transpilar o projeto:
 ```
 Renomear o arquivo .env.example para .env para conectar com a nossa aplicação na nuvem.
 Alterar os dados para:
-DB_HOST=containers-us-west-25.railway.app
-DB_USER=root
-DB_PASS=pWFh11MfOW7ABuBk0jwi
-DB_PORT=6319
-DB_NAME=railway
+
+DB_HOST=containers-us-west-25.railway.app <br>
+DB_USER=root <br>
+DB_PASS=pWFh11MfOW7ABuBk0jwi <br>
+DB_PORT=6319 <br>
+DB_NAME=railway <br>
 
 
 ## Funcionalidades
