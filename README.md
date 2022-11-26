@@ -1,3 +1,5 @@
+<img src="courier.svg" height="250">
+
 
 # Projeto Final - Gama Academy - Grupo 04
 
@@ -62,6 +64,12 @@ Para transpilar o projeto:
   tsc
 ```
 Renomear o arquivo .env.example para .env para conectar com a nossa aplicação na nuvem.
+Alterar os dados para:
+DB_HOST=containers-us-west-25.railway.app
+DB_USER=root
+DB_PASS=pWFh11MfOW7ABuBk0jwi
+DB_PORT=6319
+DB_NAME=railway
 
 
 ## Funcionalidades
