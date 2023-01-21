@@ -112,6 +112,7 @@ Feito em sua totalidade GET, GET BY ID, DELETE, PUT, POST para as entidades TABL
 
 
 
+
 ## Autores
 
 - <img src="https://avatars.githubusercontent.com/u/95940707?s=60&v=4"> [@DuAlexandre](https://github.com/DuAlexandre)
